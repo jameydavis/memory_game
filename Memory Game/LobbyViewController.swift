@@ -44,7 +44,7 @@ class LobbyViewController: UIViewController {
     @IBAction func fourByFiveTapped(_ sender: Any) {
         defaults.set(4, forKey: "NumberOfColumns")
         defaults.set(20, forKey: "NumberOfCards")
-        defaults.set(10, forKey: "c")
+        defaults.set(10, forKey: "PairsMultiplier")
         self.performSegue(withIdentifier: "playGame", sender: self)
     }
 }
