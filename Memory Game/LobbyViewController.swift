@@ -13,11 +13,20 @@ class LobbyViewController: UIViewController {
     @IBOutlet var gridSizeButtons: [UIButton]!
     
     let defaults = UserDefaults.standard
+    let cornerRadiusPercentage: CGFloat = 0.2
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        roundButtonCorners()
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func roundButtonCorners() {
+        for button in self.gridSizeButtons {
+            button.layer.cornerRadius = button.frame.height * cornerRadiusPercentage
+        }
     }
     
     @IBAction func threeByFourTapped(_ sender: Any) {
