@@ -11,3 +11,5 @@ the cards will remain upright. If there is not a match the cards will flip over 
 
 The game is over when all matches have been found.
 
+![Memory Game screenshot](Memory%20Game/images/memory_game_screenshot.png)
+

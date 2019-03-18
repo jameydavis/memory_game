@@ -17,6 +17,7 @@
 		5E2FA871223F1BC000EB0280 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA870223F1BC000EB0280 /* CardCollectionViewCell.swift */; };
 		5E5C0710223F4E8000499084 /* GothamRoundedMedium_21022.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5C070F223F4E7F00499084 /* GothamRoundedMedium_21022.ttf */; };
 		5E5C0712223F533B00499084 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0711223F533B00499084 /* LobbyViewController.swift */; };
+		5E8BA41F223FCFA10072A41C /* memory_game_screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E8BA41E223FCFA10072A41C /* memory_game_screenshot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5E2FA870223F1BC000EB0280 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E5C070F223F4E7F00499084 /* GothamRoundedMedium_21022.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedMedium_21022.ttf; sourceTree = "<group>"; };
 		5E5C0711223F533B00499084 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
+		5E8BA41E223FCFA10072A41C /* memory_game_screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memory_game_screenshot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		5E2FA856223F052E00EB0280 /* Memory Game */ = {
 			isa = PBXGroup;
 			children = (
+				5E8BA41D223FCF640072A41C /* images */,
 				5E2FA857223F052E00EB0280 /* AppDelegate.swift */,
 				5E2FA86C223F12F200EB0280 /* CardModel.swift */,
 				5E2FA86E223F13EF00EB0280 /* Card.swift */,
@@ -77,6 +80,14 @@
 				5E2FA863223F053000EB0280 /* Info.plist */,
 			);
 			path = "Memory Game";
+			sourceTree = "<group>";
+		};
+		5E8BA41D223FCF640072A41C /* images */ = {
+			isa = PBXGroup;
+			children = (
+				5E8BA41E223FCFA10072A41C /* memory_game_screenshot.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +151,7 @@
 				5E2FA862223F053000EB0280 /* LaunchScreen.storyboard in Resources */,
 				5E5C0710223F4E8000499084 /* GothamRoundedMedium_21022.ttf in Resources */,
 				5E2FA85F223F053000EB0280 /* Assets.xcassets in Resources */,
+				5E8BA41F223FCFA10072A41C /* memory_game_screenshot.png in Resources */,
 				5E2FA85D223F052E00EB0280 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
