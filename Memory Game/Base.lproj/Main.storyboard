@@ -1,24 +1,225 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OhN-eG-qPm">
+    <device id="retina5_9" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothamRoundedMedium_21022.ttf">
+            <string>GothamRounded-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Lobby View Controller-->
+        <scene sceneID="582-8x-O2f">
+            <objects>
+                <viewController id="OhN-eG-qPm" customClass="LobbyViewController" customModule="Memory_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5jv-vJ-bn3">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Memory Game" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1S-LZ-7In">
+                                <rect key="frame" x="289" y="53.666666666666657" width="234.33333333333337" height="32"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="4kc-Le-j3T">
+                                <rect key="frame" x="306" y="93.666666666666686" width="200" height="188"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lK-bK-p2R">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="32"/>
+                                        <state key="normal" title="3 x 4">
+                                            <color key="titleColor" red="0.56078431370000004" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="threeByFourTapped:" destination="OhN-eG-qPm" eventType="touchUpInside" id="J5R-5z-mP6"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQE-Ki-7Tb">
+                                        <rect key="frame" x="0.0" y="47.999999999999986" width="200" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="32"/>
+                                        <state key="normal" title="5 x 2">
+                                            <color key="titleColor" red="0.56078431370000004" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fiveByTwoTapped:" destination="OhN-eG-qPm" eventType="touchUpInside" id="gdF-vy-MuT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DOe-9c-hYw">
+                                        <rect key="frame" x="0.0" y="95.999999999999986" width="200" height="44.000000000000014"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="32"/>
+                                        <state key="normal" title="4 x 4">
+                                            <color key="titleColor" red="0.56078431370000004" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fourByFourTapped:" destination="OhN-eG-qPm" eventType="touchUpInside" id="Ekr-eX-dBa"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKh-CE-Sq6">
+                                        <rect key="frame" x="0.0" y="144" width="200" height="44"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="32"/>
+                                        <state key="normal" title="4 x 5">
+                                            <color key="titleColor" red="0.56078431370000004" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="fourByFiveTapped:" destination="OhN-eG-qPm" eventType="touchUpInside" id="Yvc-GF-lxT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Vdd-nI-js7"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many cards would you like?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b0S-Wr-jaz">
+                                <rect key="frame" x="275" y="289.66666666666669" width="262" height="16"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.56078431370000004" green="0.76862745099999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4kc-Le-j3T" firstAttribute="top" secondItem="V1S-LZ-7In" secondAttribute="bottom" constant="8" id="5HG-YD-xbL"/>
+                            <constraint firstItem="b0S-Wr-jaz" firstAttribute="top" secondItem="4kc-Le-j3T" secondAttribute="bottom" constant="8" id="5k8-XW-9Wd"/>
+                            <constraint firstItem="4kc-Le-j3T" firstAttribute="centerX" secondItem="5jv-vJ-bn3" secondAttribute="centerX" id="FNP-vZ-zoN"/>
+                            <constraint firstItem="V1S-LZ-7In" firstAttribute="centerX" secondItem="5jv-vJ-bn3" secondAttribute="centerX" id="Kfw-9r-NIK"/>
+                            <constraint firstItem="4kc-Le-j3T" firstAttribute="centerY" secondItem="5jv-vJ-bn3" secondAttribute="centerY" id="rzR-KM-Xew"/>
+                            <constraint firstItem="b0S-Wr-jaz" firstAttribute="centerX" secondItem="5jv-vJ-bn3" secondAttribute="centerX" id="wdH-Md-q58"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YwJ-1N-Nin"/>
+                    </view>
+                    <connections>
+                        <outletCollection property="gridSizeButtons" destination="9lK-bK-p2R" collectionClass="NSMutableArray" id="Kxj-V2-mIx"/>
+                        <outletCollection property="gridSizeButtons" destination="WQE-Ki-7Tb" collectionClass="NSMutableArray" id="CcE-2d-vob"/>
+                        <outletCollection property="gridSizeButtons" destination="DOe-9c-hYw" collectionClass="NSMutableArray" id="OYj-22-E6L"/>
+                        <outletCollection property="gridSizeButtons" destination="PKh-CE-Sq6" collectionClass="NSMutableArray" id="pdL-5x-Je8"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="playGame" id="bHW-uW-GWt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgt-7W-6Kf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428.57142857142861" y="-108"/>
+        </scene>
+        <!--Gameplay View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GameplayViewController" customModule="Memory_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ooa-XZ-sRL">
+                                <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                                <color key="backgroundColor" red="0.5607843137254902" green="0.76862745098039209" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tc-nc-MpE">
+                                <rect key="frame" x="60" y="16" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RJk-Wh-0aC"/>
+                                    <constraint firstAttribute="width" constant="50" id="UO7-RJ-W8r"/>
+                                </constraints>
+                                <state key="normal" image="backNavButton"/>
+                                <connections>
+                                    <action selector="backToLobby:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XDt-t7-7RE"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="3du-Sl-vz5">
+                                <rect key="frame" x="44" y="64" width="724" height="290"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IEs-65-Fgp">
+                                        <rect key="frame" x="0.0" y="0.0" width="724" height="290"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FEJ-8T-pZ5">
+                                            <size key="itemSize" width="150" height="150"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="HLf-ic-QnS" customClass="CardCollectionViewCell" customModule="Memory_Game" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="memoryCardFront_1" translatesAutoresizingMaskIntoConstraints="NO" id="9y0-Pi-acu">
+                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="211"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="allCardBacks" translatesAutoresizingMaskIntoConstraints="NO" id="Erq-2q-4aj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="211"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="9y0-Pi-acu" firstAttribute="top" secondItem="HLf-ic-QnS" secondAttribute="top" id="4jN-sx-5yL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Erq-2q-4aj" secondAttribute="trailing" id="TYN-Pj-EbL"/>
+                                                    <constraint firstAttribute="trailing" secondItem="9y0-Pi-acu" secondAttribute="trailing" id="XFW-H3-N6Z"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Erq-2q-4aj" secondAttribute="bottom" id="auu-am-Hh6"/>
+                                                    <constraint firstItem="Erq-2q-4aj" firstAttribute="leading" secondItem="HLf-ic-QnS" secondAttribute="leading" id="wfp-cr-T2I"/>
+                                                    <constraint firstItem="9y0-Pi-acu" firstAttribute="leading" secondItem="HLf-ic-QnS" secondAttribute="leading" id="yFR-X5-mzD"/>
+                                                    <constraint firstItem="Erq-2q-4aj" firstAttribute="top" secondItem="HLf-ic-QnS" secondAttribute="top" id="zKz-a0-oPh"/>
+                                                    <constraint firstAttribute="bottom" secondItem="9y0-Pi-acu" secondAttribute="bottom" id="zVn-fV-HXI"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="backImageView" destination="Erq-2q-4aj" id="een-xN-aRL"/>
+                                                    <outlet property="frontImageView" destination="9y0-Pi-acu" id="qtR-Hk-y5E"/>
+                                                </connections>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap cards to find a match!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="keH-6R-pbX">
+                                <rect key="frame" x="223.66666666666663" y="22" width="365" height="28.333333333333329"/>
+                                <fontDescription key="fontDescription" name="GothamRounded-Medium" family="Gotham Rounded" pointSize="28"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="-2" height="2"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ooa-XZ-sRL" secondAttribute="bottom" id="3t2-QZ-TVM"/>
+                            <constraint firstItem="ooa-XZ-sRL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="9Xj-Vt-sqF"/>
+                            <constraint firstItem="6tc-nc-MpE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="DN8-It-vPE"/>
+                            <constraint firstItem="6tc-nc-MpE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="M81-Jo-i2Z"/>
+                            <constraint firstItem="ooa-XZ-sRL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RIu-2T-cAW"/>
+                            <constraint firstAttribute="trailing" secondItem="ooa-XZ-sRL" secondAttribute="trailing" id="Ym3-Sl-HnP"/>
+                            <constraint firstItem="3du-Sl-vz5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="boE-ys-eMx"/>
+                            <constraint firstItem="keH-6R-pbX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fdV-dm-LfM"/>
+                            <constraint firstItem="3du-Sl-vz5" firstAttribute="top" secondItem="6tc-nc-MpE" secondAttribute="bottom" constant="8" id="lCR-se-nf6"/>
+                            <constraint firstItem="3du-Sl-vz5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ugp-p6-Akt"/>
+                            <constraint firstItem="keH-6R-pbX" firstAttribute="centerY" secondItem="6tc-nc-MpE" secondAttribute="centerY" id="vCf-iA-CNE"/>
+                            <constraint firstItem="3du-Sl-vz5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w2S-kV-aUg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="backButton" destination="6tc-nc-MpE" id="pc5-ay-fgZ"/>
+                        <outlet property="backgroundImageView" destination="ooa-XZ-sRL" id="4LL-9b-Ru2"/>
+                        <outlet property="collectionView" destination="IEs-65-Fgp" id="NqL-lU-fAN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="-108"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="allCardBacks" width="147" height="211"/>
+        <image name="backNavButton" width="95.666664123535156" height="82"/>
+        <image name="memoryCardFront_1" width="147" height="211"/>
+    </resources>
 </document>

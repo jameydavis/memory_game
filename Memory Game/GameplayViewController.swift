@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  GameplayViewController.swift
 //  Memory Game
 //
 //  Created by Jamey Davis on 3/17/19.
@@ -8,20 +8,27 @@
 
 import UIKit
 
-class GamePlayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class GameplayViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    let inset: CGFloat = 10
+    let minimumSpacing: CGFloat = 10
+    let minimumInteritemSpacing: CGFloat = 10
+    let cellsPerRow = UserDefaults.standard.integer(forKey: "NumberOfColumns")
+    let cardCount = UserDefaults.standard.integer(forKey: "NumberOfCards")
     var model = CardModel()
     var cardArray = [Card]()
+    
+    var grid: [Int] = []
     
     var firstFlippedCardIndex: IndexPath?
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var backButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // call the getCards method of the CardModel
         cardArray = model.getCards()
         
         self.collectionView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.0)
@@ -33,7 +40,7 @@ class GamePlayViewController: UIViewController, UICollectionViewDelegate, UIColl
 
     // MARK: - UICollectionView Protocol Methods
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cardArray.count
+        return cardCount
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -58,42 +65,40 @@ class GamePlayViewController: UIViewController, UICollectionViewDelegate, UIColl
             if firstFlippedCardIndex == nil {
                 firstFlippedCardIndex = indexPath
             } else {
-                // TODO: - perform matching logic
                 checkForMatches(indexPath)
             }
         }
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let marginsAndInsets = inset * 2 + collectionView.safeAreaInsets.left + collectionView.safeAreaInsets.right + minimumInteritemSpacing * CGFloat(cellsPerRow - 1)
+        let itemWidth = ((collectionView.bounds.size.width - marginsAndInsets) / CGFloat(cellsPerRow)).rounded(.down)
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    // MARK: - Actions    
+    @IBAction func backToLobby(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Game Logic Methods
     func checkForMatches(_ secondFlippedCardIndex: IndexPath) {
-        // get the cells for the 2 cards that were revealed
         let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
         let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
         
-        // get the cards for the 2 cards taht were revealed
         let cardOne = cardArray[firstFlippedCardIndex!.item]
         let cardTwo = cardArray[secondFlippedCardIndex.item]
         
-        // compare
         if cardOne.imageName == cardTwo.imageName {
-            // it's a match
-            
-            // set the status of the cards
             cardOne.isMatched = true
             cardTwo.isMatched = true
-            
-            // remove the cards from the grid
-            cardOneCell?.isUserInteractionEnabled = false
-            cardTwoCell?.isUserInteractionEnabled = false
+            cardOne.isFlipped = true
+            cardTwo.isFlipped = true
         } else {
-            // it's not a match
-            
-            // set the statues of cards
             cardOne.isFlipped = false
             cardTwo.isFlipped = false
             
-            // flip both cards back
             cardOneCell?.flipBack()
             cardTwoCell?.flipBack()
             
@@ -101,6 +106,7 @@ class GamePlayViewController: UIViewController, UICollectionViewDelegate, UIColl
                 collectionView.reloadItems(at: [firstFlippedCardIndex!])
             }
         }
+        
         firstFlippedCardIndex = nil
     }
     

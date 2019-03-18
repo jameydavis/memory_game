@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		5E2FA858223F052E00EB0280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA857223F052E00EB0280 /* AppDelegate.swift */; };
-		5E2FA85A223F052E00EB0280 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA859223F052E00EB0280 /* ViewController.swift */; };
+		5E2FA85A223F052E00EB0280 /* GameplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA859223F052E00EB0280 /* GameplayViewController.swift */; };
 		5E2FA85D223F052E00EB0280 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FA85B223F052E00EB0280 /* Main.storyboard */; };
 		5E2FA85F223F053000EB0280 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FA85E223F053000EB0280 /* Assets.xcassets */; };
 		5E2FA862223F053000EB0280 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E2FA860223F053000EB0280 /* LaunchScreen.storyboard */; };
+		5E2FA86D223F12F200EB0280 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA86C223F12F200EB0280 /* CardModel.swift */; };
+		5E2FA86F223F13EF00EB0280 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA86E223F13EF00EB0280 /* Card.swift */; };
+		5E2FA871223F1BC000EB0280 /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2FA870223F1BC000EB0280 /* CardCollectionViewCell.swift */; };
+		5E5C0710223F4E8000499084 /* GothamRoundedMedium_21022.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5E5C070F223F4E7F00499084 /* GothamRoundedMedium_21022.ttf */; };
+		5E5C0712223F533B00499084 /* LobbyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5C0711223F533B00499084 /* LobbyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5E2FA854223F052E00EB0280 /* Memory Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2FA857223F052E00EB0280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E2FA859223F052E00EB0280 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E2FA859223F052E00EB0280 /* GameplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameplayViewController.swift; sourceTree = "<group>"; };
 		5E2FA85C223F052E00EB0280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5E2FA85E223F053000EB0280 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E2FA861223F053000EB0280 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E2FA863223F053000EB0280 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E2FA86C223F12F200EB0280 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		5E2FA86E223F13EF00EB0280 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		5E2FA870223F1BC000EB0280 /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
+		5E5C070F223F4E7F00499084 /* GothamRoundedMedium_21022.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GothamRoundedMedium_21022.ttf; sourceTree = "<group>"; };
+		5E5C0711223F533B00499084 /* LobbyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +65,15 @@
 			isa = PBXGroup;
 			children = (
 				5E2FA857223F052E00EB0280 /* AppDelegate.swift */,
-				5E2FA859223F052E00EB0280 /* ViewController.swift */,
+				5E2FA86C223F12F200EB0280 /* CardModel.swift */,
+				5E2FA86E223F13EF00EB0280 /* Card.swift */,
+				5E2FA870223F1BC000EB0280 /* CardCollectionViewCell.swift */,
+				5E2FA859223F052E00EB0280 /* GameplayViewController.swift */,
+				5E5C0711223F533B00499084 /* LobbyViewController.swift */,
 				5E2FA85B223F052E00EB0280 /* Main.storyboard */,
 				5E2FA85E223F053000EB0280 /* Assets.xcassets */,
 				5E2FA860223F053000EB0280 /* LaunchScreen.storyboard */,
+				5E5C070F223F4E7F00499084 /* GothamRoundedMedium_21022.ttf */,
 				5E2FA863223F053000EB0280 /* Info.plist */,
 			);
 			path = "Memory Game";
@@ -123,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E2FA862223F053000EB0280 /* LaunchScreen.storyboard in Resources */,
+				5E5C0710223F4E8000499084 /* GothamRoundedMedium_21022.ttf in Resources */,
 				5E2FA85F223F053000EB0280 /* Assets.xcassets in Resources */,
 				5E2FA85D223F052E00EB0280 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5E2FA85A223F052E00EB0280 /* ViewController.swift in Sources */,
+				5E2FA85A223F052E00EB0280 /* GameplayViewController.swift in Sources */,
 				5E2FA858223F052E00EB0280 /* AppDelegate.swift in Sources */,
+				5E2FA86D223F12F200EB0280 /* CardModel.swift in Sources */,
+				5E5C0712223F533B00499084 /* LobbyViewController.swift in Sources */,
+				5E2FA871223F1BC000EB0280 /* CardCollectionViewCell.swift in Sources */,
+				5E2FA86F223F13EF00EB0280 /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
